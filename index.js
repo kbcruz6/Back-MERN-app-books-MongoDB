@@ -16,6 +16,11 @@ app.use((req, res, next) => {
 });
 
 //! ROUTES
+app.get("/", (req, res) => {
+  res
+    .status(200)
+    .json({ Message: "This is the backend of: https://books-info.vercel.app" });
+});
 app.use("/api/books", router);
 
 //! DB CONNECTION
